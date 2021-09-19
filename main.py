@@ -27,7 +27,7 @@ def get_url_text(url):
         print("cannot connect to the internet!")
         print("please make sure you have a high speed internet connection!")
         input()
-        exit()
+        displayOptions()
 
         
 def getSoup(url_text, parser):
