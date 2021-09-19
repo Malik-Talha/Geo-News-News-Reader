@@ -248,14 +248,8 @@ def getTopNews():
     else:
         print("invalid choice")
 
-
-if __name__ == "__main__":
-    # initial prompt
-    print("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
-    print("Auther Gmail:\t\trealmaliktalha@gmail.com")
-    print("Also read license.md")
-    speak("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
-
+def displayOptions():
+    """ Display options """
     # Display categories
     while True:
         print("Please Choose one option below:")
@@ -295,5 +289,16 @@ if __name__ == "__main__":
             exit()
         else:
             print("Invalid choice! Please choose again.")
+
+if __name__ == "__main__":
+    # initial prompt
+    print("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
+    print("Auther Gmail:\t\trealmaliktalha@gmail.com")
+    print("Also read license.md")
+    speak("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
+
+    # Display options
+    displayOptions()
+    
 
     
