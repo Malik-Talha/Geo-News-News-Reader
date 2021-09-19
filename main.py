@@ -290,6 +290,7 @@ if __name__ == "__main__":
             getBusinessNews()
         elif opt == 10:
             print("Thanks for coming!")
+            speak("Thanks for coming!")
             exit()
         else:
             print("Invalid choice! Please choose again.")
