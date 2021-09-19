@@ -24,8 +24,9 @@ def get_url_text(url):
     try:
         return requests.get(url).text
     except Exception as e:
-        print("Connection error!")
-        print("Plays make sure you have a high speed internet!")
+        print("cannot connect to the internet!")
+        print("please make sure you have a high speed internet connection!")
+        input()
         exit()
 
         
