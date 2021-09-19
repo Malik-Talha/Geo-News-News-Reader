@@ -51,6 +51,11 @@ def getHeadlinesList(soup):
     for a in soup.find_all('a'):
         news += str(a.text)
     list = news.split("\n")
+
+    # remove empty entries in list
+    for index, item in enumerate(list):
+        if item == "":
+            list.remove("")
     # Featured news is at the index 19 , insert it at the start
     headlines.insert(0,list[19])
     return headlines
