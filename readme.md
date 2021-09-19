@@ -26,9 +26,10 @@ While reading a news, it also display the link of the category. It also displays
 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+This project is open for every to contribute and use. Pull requests are warmly welcome. Please contribute to this project, add new features, interface, more news reliable sources. I will highly appreciate your contribution. For major changes, please open an issue first to discuss what you would like to change. 
 
 Please make sure to update tests as appropriate.
+Thanks!
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
