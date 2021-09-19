@@ -1,5 +1,5 @@
 # Geo News, the news reader
-This console based news reader scrapes news headings from [Geo News](https://www.geo.tv/) (in Englnsh) and reads.
+This console based news reader scrapes news headings from [Geo News](https://www.geo.tv/) (in English) and reads.
 
 ## External Modules used (names)
 requests
