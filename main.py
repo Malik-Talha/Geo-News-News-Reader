@@ -18,6 +18,9 @@ def speak(string):
 
 def get_url_text(url):
     """ Get text property of request.get() of given url """
+    # print message for user to wait
+    print("connecting to the internet.")
+    print("please wait...")
     try:
         return requests.get(url).text
     except Exception as e:
