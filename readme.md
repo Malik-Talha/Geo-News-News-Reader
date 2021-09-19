@@ -14,10 +14,10 @@ os
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the external modules.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required modules.
 
 ```bash
-pip install <name_of_module>
+pip install -r requirements.txt
 ```
 
 ## Usage
