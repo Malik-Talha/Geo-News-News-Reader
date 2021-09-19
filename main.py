@@ -18,7 +18,7 @@ def speak(string):
 
 def get_url_text(url):
     """ Get text property of request.get() of given url """
-    # print message for user to wait
+    # print message for user to
     print("connecting to the internet.")
     print("please wait...")
     try:
@@ -251,6 +251,8 @@ def getTopNews():
 if __name__ == "__main__":
     # initial prompt
     print("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
+    print("Auther Gmail:\t\trealmaliktalha@gmail.com")
+    print("Also read license.md")
     speak("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
 
     # Display categories
