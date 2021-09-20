@@ -288,7 +288,11 @@ if __name__ == "__main__":
     print("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
     print("Auther Gmail:\t\trealmaliktalha@gmail.com")
     print("Please read also license.md")
+<<<<<<< HEAD
     print("Special thanks to:\t\tgeo.tv")
+=======
+    print("Special thanks to:\t\tgeo.tv\n\n")
+>>>>>>> development
     speak("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
 
     # Display options
