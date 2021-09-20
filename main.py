@@ -1,7 +1,7 @@
 from bs4.element import Script
 import requests
 import bs4
-from requests.api import get
+from requests.api import get, head
 from win32com.client import Dispatch
 from win32com.client.makepy import main
 import os
@@ -241,6 +241,37 @@ def getTopNews():
     else:
         print("invalid choice")
 
+def getPakCovidFig():
+    """ scrape Covid-19 figures frm geo.tv """
+
+    url = "https://www.geo.tv/"
+    soup = getSoup(get_url_text(url), "html.parser")
+
+    # get covid-19 figures 
+    list = ""
+    for span in soup.findAll("span", class_="vb_right_text"):
+        list += span.text + '\n'
+    figures = list.split('\n')
+
+    # get covid-19 corresponing headings to figures
+    list = ""
+    for span in soup.findAll("span", class_="vb_right_number"):
+        list += span.text + '\n'
+    headings = list.split('\n')
+    
+    # zip to convert into dictionary
+    covid_cases = dict(zip(headings,figures))
+
+    # speak and display
+    clrscr()
+    print("Covid-19 situation in Pakistan:")
+    speak(("Covid-19 situation in Pakistan:"))
+    for head, figure in covid_cases.items():
+        print(head + ":\t\t" + str(figure))
+        speak((head + ":\t\t" + str(figure)))
+    clrscr()
+
+
 def displayOptions():
     """ Display options """
     # Display categories
@@ -255,7 +286,8 @@ def displayOptions():
         print(f"7. For Sports Headlines:")
         print(f"8. For Technology Headlines:")
         print(f"9. For Business Headlines:")
-        print(f"10. To exit:")
+        print(f"10. For Covid-19 figures in Pakistan:")
+        print(f"11. To exit:")
         opt = int(input())
         clrscr()
         if opt == 1:
@@ -276,7 +308,10 @@ def displayOptions():
             getTechNews()
         elif opt == 9:
             getBusinessNews()
+        
         elif opt == 10:
+            getPakCovidFig()
+        elif opt == 11:
             print("Thanks for coming!")
             speak("Thanks for coming!")
             exit()
@@ -295,4 +330,6 @@ if __name__ == "__main__":
     displayOptions()
     
 
+ 
+    
     
