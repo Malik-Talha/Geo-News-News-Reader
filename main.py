@@ -287,7 +287,8 @@ if __name__ == "__main__":
     # initial prompt
     print("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
     print("Auther Gmail:\t\trealmaliktalha@gmail.com")
-    print("Also read license.md")
+    print("Please read also license.md")
+    print("Special thanks to:\t\tgeo.tv")
     speak("Welcome! This Geo news, news reader is developed by Talha Murtaza.")
 
     # Display options
