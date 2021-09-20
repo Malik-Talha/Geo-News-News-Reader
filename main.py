@@ -43,21 +43,9 @@ def getHeadlinesList(soup):
     for h2 in soup.findAll('h2'):
         headlines.append(h2.get_text())
 
-    # Skip the unwanted glitch at the index 0
+    # Skip the unwanted glitch/entry at the index 0
     headlines = headlines[1:]
 
-    # find the missed (featured news) in the other tage <a  
-    news = ""
-    for a in soup.find_all('a'):
-        news += str(a.text)
-    list = news.split("\n")
-
-    # remove empty entries in list
-    for index, item in enumerate(list):
-        if item == "":
-            list.remove("")
-    # Featured news is at the index 19 , insert it at the start
-    headlines.insert(0,list[19])
     return headlines
 
 def speakHeadlines(category, url, headlines, nOfNews):
